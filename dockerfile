@@ -4,4 +4,4 @@ RUN apt-get update -y
 RUN apt-get install -y --no-install-recommends speedtest-cli
 RUN apt-get -y clean
 
-CMD [ "speedtest" ]
+CMD [ "/bin/bash", "-c", "speedtest --version && speedtest --help" ]
